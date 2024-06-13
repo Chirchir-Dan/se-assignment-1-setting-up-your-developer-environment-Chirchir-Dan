@@ -1,0 +1,66 @@
+Setting Up My Development Environment on Windows 11
+
+
+This document details the step-by-step process I followed to set up my development environment on Windows 11, Softwares I installed, challenge I faced and its solution.
+
+1. Installing Windows 11 Operating System
+
+Downloaded Windows 11 from Microsoft's official download page.
+Created a bootable USB drive using Rufus and installed Windows 11 on my system.
+
+2. Installed Visual Studio Code
+
+Steps I Followed:
+
+Downloaded Visual Studio Code from VS Code's official download page.
+
+Ran the installer and followed the on-screen instructions to complete the installation.
+Opened Visual Studio Code after installation to verify its functionality.
+
+3. Installed Dart and Flutter
+
+Downloaded the Dart SDK from Dart's official website.
+Extracted the Dart SDK archive to C:\src\dart, my preferred location for development.
+Added Dart's bin directory (C:\src\dart\bin) to the system PATH.
+Installed Flutter SDK:
+
+Downloaded the Flutter SDK from Flutter's official website.
+Extracted the Flutter SDK archive to C:\src\flutter, my preferred location for Flutter development.
+Added Flutter's bin directory (C:\src\flutter\bin) to the system PATH.
+Set Up Flutter Doctor:
+
+Opened Command Prompt and ran flutter doctor to verify Flutter installation and check for any missing dependencies.
+I found that Android SDK could not find adb, I was installing on Windows and running it from Wsl2, so there were some tricky challenges.
+
+4. Integrated ADB with Flutter
+
+Challenge Faced:
+
+After installing Flutter, running flutter doctor reported that ADB (Android Debug Bridge) was not found, despite ADB being installed on my system.
+Solution Employed:
+Configured ADB Path:
+Added the correct path to ADB (C:\Users\MyUsername\AppData\Local\Android\Sdk\platform-tools) to the system's PATH environment variable.
+Verified the path configuration by restarting Command Prompt and re-running flutter doctor to ensure ADB integration was successful.
+
+5. Installed Python Programming Language.
+
+Downloaded Python from Python's official website.
+Ran the Python installer and ensured Python was added to the system PATH.
+
+Installed Django using pip.
+pip install django
+
+6. Configured a Database (MySQL)
+
+Downloaded MySQL Database:
+Downloaded MySQL Community Server from MySQL's official website.
+Ran the MySQL installer and followed the installation prompts to set up MySQL on my system.
+
+
+Conclusion
+I have successfully set up my development environment on Windows 11, now I have Dart, Flutter, Python, MySQL and Django. I overcame ADB integration challenges, I consulted official documentation where necessary. This document provides a detailed account of the steps I followed, ensuring a robust setup conducive to my software engineering projects.
+
+
+
+Github repository:
+https://github.com/Chirchir-Dan/Power-Learn_Project
